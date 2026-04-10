@@ -1,5 +1,5 @@
-import {state,board,} from './board.js'
-import {renderBoard} from './renderBoard.js'
+import {state,board,} from 'board.js'
+import {renderBoard} from 'renderBoard.js'
 import {
 notToJumpRock,
 notToJumpBishop,
@@ -9,7 +9,7 @@ CastlingForWhiteKing,
 isKingInCheck,
 tryWhitePawnMove
 
- } from './rules.js'
+ } from 'rules.js'
 
  //pawn
 export function whitePawnMoves(SelectedPeace, r, c, moveToR, moveToc, moveToPeace) {
