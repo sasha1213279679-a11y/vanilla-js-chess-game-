@@ -263,17 +263,31 @@ state.board[moveToR][moveToC] = temp;
         renderBoard();
         return true;
     } 
+
+     else if (SelectedPiece === 'K') {
+        if (CastlingForBlackKing(SelectedPiece, r, c, moveToR, moveToC)) {
+            const step = moveToC > c ? 1 : -1;
+            const rookCol = step === 1 ? 7 : 0;
+            const newRookCol = moveToC - step;
     
-    else if (SelectedPiece === 'K') {
-
-        return CastlingForBlackKing(
-            SelectedPiece,
-            r,
-            c,
-            moveToR,
-            moveToC
-        );
-    }
-
-    return false;
-}
+            state.board[r][c] = null;
+            state.board[moveToR][moveToC] = 'K';
+    
+            state.board[r][rookCol] = null;
+            state.board[r][newRookCol] = 'R';
+    
+            state.didPeacesMoved.blackKing = true;
+            if (rookCol === 7) {
+                state.didPeacesMoved.blackRookRight = true;
+            } else {
+                state.didPeacesMoved.blackRookLeft = true;
+            }
+    
+            board.innerHTML = '';
+            renderBoard();
+    
+            return true;
+        } else {
+            return false;
+        }
+    }}
