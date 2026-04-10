@@ -256,7 +256,7 @@ export function whiteKnightMoves(SelectedPeace, r, c, moveToR, moveToc, moveToPe
             state.board[moveToR][moveToC] = 'k';
             state.board[r][c] = null;
     
-            if (WillKingsTouch()) {
+            if (TouchKings()) {
                 state.board[r][c] = 'k';
                 state.board[moveToR][moveToC] = temp;
                 return false;
