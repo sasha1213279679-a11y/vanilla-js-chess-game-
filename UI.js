@@ -1,5 +1,5 @@
-import { controlRound } from "Chess.js"; 
-import { state } from "board.js";
+import { controlRound } from "./Chess.js"; 
+import { state } from "./board.js";
 // all variables 
 const gameTim = sessionStorage.getItem('gameTime');
 let whiteTime = gameTim * 60; 
