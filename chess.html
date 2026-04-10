@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="/css-files/chess.css">
+<title>Chess</title>
+</head>
+<!-- Left bar-->
+
+<body>
+  <div id="sidebar" class="glass-panel">
+    <div class="turnFor-js turnFor-css">The Turn is For white</div>
+    <p id="firstPlayer-js" class="firstPlayer-css">Player 1</p>
+    <p id="secondPlayer-js" class="secondPlayer-css">Player 2</p>
+    <button id="playMusic">Music to focus</button>
+  </div>
+<!-- board-->
+
+  <div class="app">
+    <div id="board"></div>
+  </div>
+<!-- Right bar-->
+
+  <div id="infoBox" class="glass-panel">
+    <h3>Match Info</h3>
+
+    <div class="timer-card">
+      <div class="timer-title">White Time</div>
+      <div id="whiteTime-js" class="timer-value">10:00</div>
+    </div>
+
+
+    <div id="movesPanel">
+      <h3>Moves</h3>
+
+      <div class="moves-container">
+        <div>
+          <h4>All Moves</h4>
+          <div id="whiteMoves-js" class="moves-list"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="timer-card">
+      <div class="timer-title">Black Time</div>
+      <div id="blackTime-js" class="timer-value">10:00</div>
+    </div>
+  </div>  
+    <!--Pawn promotion-box-->
+
+    <div id="promotion-box" class="hidden">
+      <div class="promotion-content">
+        <h3 class="promotion-title">Choose Promotion Piece</h3>
+      </div>
+    </div>
+  <audio id ='startGameSound-js' src="/Sounds.mp3/Sound Effects - Chess.com Sounds.mp3" ></audio>
+  <script type="module" src="/js-files/Chess.js"></script>
+</body>
+</html>

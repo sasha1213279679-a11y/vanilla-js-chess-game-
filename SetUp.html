@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Game Setup</title>
+  <link rel="stylesheet" href="/css-files/setUp.css">
+</head>
+<body>
+
+  <div class="bg-pattern"></div>
+
+  <main class="setup-container">
+    <div class="title-wrap">
+      <div class="crown">♛</div>
+      <h2>Chess Game Setup</h2>
+      <p>Prepare the board before the battle begins</p>
+    </div>
+
+    <label for="player1">White Player Name:</label>
+    <input type="text" id="player1" placeholder="Enter name" required>
+
+    <label for="player2">Black Player Name:</label>
+    <input type="text" id="player2" placeholder="Enter name" required>
+
+    <label for="time">Game Duration (minutes):</label>
+    <select id="time">
+      <option value="5">5 minutes</option>
+      <option value="10" selected>10 minutes</option>
+      <option value="15">15 minutes</option>
+      <option value="30">30 minutes</option>
+    </select>
+
+    <button id="startBtn">Start Game</button>
+  </main>
+
+  <audio id="setupMusic" src="/Sounds.mp3/setUp.mp3" loop></audio>
+  <script src="/js-files/setUP.js"></script>
+</body>
+</html>
