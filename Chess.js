@@ -5,7 +5,7 @@ import {
     whiteRockMoves,
     whiteBishopMoves,
     whiteKingMoves,
-} from '/whitePeacessMoves.js';
+} from './whitePeacessMoves.js';
 
 import {
     blackKingMoves,
@@ -14,17 +14,17 @@ import {
     blackRockMoves,
     blackKnightMoves,
     blackBishopMoves,
-} from 'blackPeacessMoves.js';
+} from './blackPeacessMoves.js';
 
-import { renderBoard } from 'renderBoard.js';
+import { renderBoard } from './renderBoard.js';
 import { controlRounds, 
     checkPromotion
     ,isKingInCheck,
     isCheckmate,
     isStalemate,
 
- } from 'rules.js';
-import { state,getPieceName } from 'board.js';
+ } from './rules.js';
+import { state,getPieceName } from './board.js';
 import { showCheckmateUI,
     updateBoardRotation,
     toggleMusic,
@@ -33,7 +33,7 @@ import { showCheckmateUI,
     gameStartSound,
     showIsStalemateUI,
     
-} from 'UI.js';
+} from './UI.js';
 import { getMoves } from 'getMoves.js';
 
 // all variables and functions related to moves for all pieces will be here
