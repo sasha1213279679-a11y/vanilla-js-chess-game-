@@ -442,20 +442,16 @@ export function WillKingsTouch(SelectedPiece, fromR, fromC, toR, toC) {
     return (diffR <= 1 && diffC <= 1);
 }
 
-// castling for kings
-export function CastlingForBlackKing(SelectedPeace, r, c, moveToR, moveToC) {
-
+// castling for kingsexport function CastlingForBlackKing(SelectedPeace, r, c, moveToR, moveToC) {
     if (SelectedPeace !== 'K') return false;
-
     if (r !== moveToR || Math.abs(moveToC - c) !== 2) return false;
 
     const step = moveToC > c ? 1 : -1;
+    const rookCol = step === 1 ? 7 : 0;
 
     if (state.didPeacesMoved.blackKing) return false;
 
-    const rookCol = step === 1 ? 7 : 0;
     const rook = state.board[r][rookCol];
-
     if (rook !== 'R') return false;
 
     if (step === 1 && state.didPeacesMoved.blackRookRight) return false;
@@ -466,7 +462,6 @@ export function CastlingForBlackKing(SelectedPeace, r, c, moveToR, moveToC) {
     }
 
     const color = 'black';
-
     if (isKingInCheck(color)) return false;
 
     state.board[r][c] = null;
@@ -490,36 +485,21 @@ export function CastlingForBlackKing(SelectedPeace, r, c, moveToR, moveToC) {
     state.board[r][c] = 'K';
     state.board[moveToR][moveToC] = null;
 
-    state.board[moveToR][moveToC] = 'K';
-    state.board[r][c] = null;
-
-    const newRookCol = moveToC - step;
-
-    state.board[r][newRookCol] = 'R';
-    state.board[r][rookCol] = null;
-
-    board.innerHTML = '';
-    renderBoard();
-
     return true;
 }
 
 
 
-
 export function CastlingForWhiteKing(SelectedPeace, r, c, moveToR, moveToC) {
-
     if (SelectedPeace !== 'k') return false;
-
     if (r !== moveToR || Math.abs(moveToC - c) !== 2) return false;
 
     const step = moveToC > c ? 1 : -1;
+    const rookCol = step === 1 ? 7 : 0;
 
     if (state.didPeacesMoved.whiteKing) return false;
 
-    const rookCol = step === 1 ? 7 : 0;
     const rook = state.board[r][rookCol];
-
     if (rook !== 'r') return false;
 
     if (step === 1 && state.didPeacesMoved.whiteRookRight) return false;
@@ -530,7 +510,6 @@ export function CastlingForWhiteKing(SelectedPeace, r, c, moveToR, moveToC) {
     }
 
     const color = 'white';
-
     if (isKingInCheck(color)) return false;
 
     state.board[r][c] = null;
@@ -553,17 +532,6 @@ export function CastlingForWhiteKing(SelectedPeace, r, c, moveToR, moveToC) {
 
     state.board[r][c] = 'k';
     state.board[moveToR][moveToC] = null;
-
-    state.board[moveToR][moveToC] = 'k';
-    state.board[r][c] = null;
-
-    const newRookCol = moveToC - step;
-
-    state.board[r][newRookCol] = 'r';
-    state.board[r][rookCol] = null;
-
-    board.innerHTML = '';
-    renderBoard();
 
     return true;
 }
