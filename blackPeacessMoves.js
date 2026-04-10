@@ -1,11 +1,11 @@
-import {state,board,} from './board.js'
-import {renderBoard} from './renderBoard.js'
+import {state,board,} from 'board.js'
+import {renderBoard} from 'renderBoard.js'
 import {  notToJumpRock,
      notToJumpBishop,
       CastlingForBlackKing,
     tryBlackPawnMove,
     isKingInCheck,
-    TouchKings } from "./rules.js";    
+    TouchKings } from "rules.js";    
 
 
 
