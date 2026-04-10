@@ -442,7 +442,8 @@ export function WillKingsTouch(SelectedPiece, fromR, fromC, toR, toC) {
     return (diffR <= 1 && diffC <= 1);
 }
 
-// castling for kingsexport function CastlingForBlackKing(SelectedPeace, r, c, moveToR, moveToC) {
+// castling for kings
+export function CastlingForBlackKing(SelectedPeace, r, c, moveToR, moveToC) {
     if (SelectedPeace !== 'K') return false;
     if (r !== moveToR || Math.abs(moveToC - c) !== 2) return false;
 
