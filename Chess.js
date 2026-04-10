@@ -34,7 +34,7 @@ import { showCheckmateUI,
     showIsStalemateUI,
     
 } from './UI.js';
-import { getMoves } from 'getMoves.js';
+import { getMoves } from './getMoves.js';
 
 // all variables and functions related to moves for all pieces will be here
 let moveSuccess = false;
