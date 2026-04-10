@@ -219,7 +219,7 @@ export function whiteKnightMoves(SelectedPeace, r, c, moveToR, moveToc, moveToPe
     
         const isBishopLike =
             Math.abs(moveToR - r) === Math.abs(moveToc - c) &&
-            notToJumpBishop(r, c, moveToR, moveToToc);
+            notToJumpBishop(r, c, moveToR, moveToc);
     
         if (!isRockLike && !isBishopLike) {
             return false;
