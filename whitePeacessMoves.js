@@ -63,8 +63,8 @@ export function whitePawnMoves(SelectedPeace, r, c, moveToR, moveToc, moveToPeac
     // capture
     if (
         moveToPeace !== null &&
-        piece !== null &&
-         piece === piece.toUpperCase() &&
+        SelectedPeace !== null &&
+         SelectedPeace ===SelectedPeace.toUpperCase() &&
         moveToR === r + 1 &&
         Math.abs(moveToc - c) === 1
     ) {
