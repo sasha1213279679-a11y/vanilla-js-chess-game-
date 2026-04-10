@@ -60,8 +60,8 @@ export function blackPawnMoves(SelectedPeace, r, c, moveToR, moveToc, moveToPeac
     // capture
     if (
         moveToPeace !== null &&
-        piece !== null &&
-         piece === piece.toLowerCase() &&
+        SelectedPeace !== null &&
+        SelectedPeace === SelectedPeace.toLowerCase() &&
         moveToR === r - 1 &&
         Math.abs(moveToc - c) === 1
     ) {
