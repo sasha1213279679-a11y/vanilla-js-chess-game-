@@ -1,8 +1,8 @@
-import { state } from 'board.js';
-import { MovesForAllPIECES } from 'Chess.js';
-import { renderBoard } from 'renderBoard.js';
-import { isSameColor, } from 'rules.js';
-import{ selectSquare } from 'UI.js';
+import { state } from './board.js';
+import { MovesForAllPIECES } from './Chess.js';
+import { renderBoard } from './renderBoard.js';
+import { isSameColor, } from './rules.js';
+import{ selectSquare } from './UI.js';
 
 
 
