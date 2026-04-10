@@ -5,7 +5,7 @@ import {
     whiteRockMoves,
     whiteBishopMoves,
     whiteKingMoves,
-} from 'whitePeacessMoves.js';
+} from '/whitePeacessMoves.js';
 
 import {
     blackKingMoves,
