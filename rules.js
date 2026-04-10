@@ -1,8 +1,8 @@
-import { controlRound } from "Chess.js";
+import { controlRound } from "./Chess.js";
 import { blackPieces,
     whitePieces,
-    state } from "board.js";
-import { renderBoard } from "renderBoard.js";
+    state } from "./board.js";
+import { renderBoard } from "./renderBoard.js";
 import { 
 pawnMoves,
 RockMoves,
@@ -10,7 +10,7 @@ KnightMoves,
 BishopMoves,
 QueenMoves,
 KingMoves
- } from "simulateMoves.js";
+ } from "./simulateMoves.js";
 //var 
  let promotionPosition = null;
  let whiteKingRow, whiteKingCol ,blackKingRow, blackKingCol;
