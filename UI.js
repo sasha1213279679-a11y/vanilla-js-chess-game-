@@ -1,5 +1,5 @@
-import { controlRound } from "./Chess.js"; 
-import { state } from "./board.js";
+import { controlRound } from "Chess.js"; 
+import { state } from "board.js";
 // all variables 
 const gameTim = sessionStorage.getItem('gameTime');
 let whiteTime = gameTim * 60; 
@@ -39,7 +39,7 @@ function showGameOverUI({ title, winnerName, winnerColor, loserName, loserColor,
 
             <div class="game-over-actions">
                 <button class="again-btn" onclick="location.reload()">Play Again</button>
-                <button class="settings-btn" onclick="window.location.href='SetUp.html'">Change Settings</button>
+                <button class="settings-btn" onclick="window.location.href='index.html'">Change Settings</button>
             </div>
         </div>
     `;
@@ -65,7 +65,7 @@ export function toggleMusic() {
 
     playButton.addEventListener('click', () => {
         if (!audio) {
-            audio = new Audio('/Sounds.mp3/classic Music.mp3');
+            audio = new Audio('classic Music.mp3');
             audio.loop = true;
             audio.play();
 
@@ -208,7 +208,7 @@ export function showIsStalemateUI() {
     });
 
     overlay.querySelector('.settings-btn').addEventListener('click', () => {
-        window.location.href = 'GameSetUp.html'; 
+        window.location.href = 'index.html'; 
     });
 }
             
