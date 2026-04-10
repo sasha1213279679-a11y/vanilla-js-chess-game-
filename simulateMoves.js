@@ -1,4 +1,4 @@
-import { state } from "./board.js";
+import { state } from "board.js";
 import { notToJumpRock,
      notToJumpBishop,
       WillKingsTouch,
@@ -7,7 +7,7 @@ import { notToJumpRock,
         isKingInCheck,
         isSameColor 
 } from "./rules.js";    
-import { controlRound } from "./Chess.js";
+import { controlRound } from "Chess.js";
 
 // Simulate moves for each piece type, checking if the move is valid and if it leaves the king in check.
 
