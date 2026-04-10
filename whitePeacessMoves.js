@@ -272,16 +272,29 @@ export function whiteKnightMoves(SelectedPeace, r, c, moveToR, moveToc, moveToPe
             board.innerHTML = '';
             renderBoard();
             return true;
-        } 
-        else if (SelectedPiece === 'k') {
-            return CastlingForWhiteKing(
-                SelectedPiece,
-                r,
-                c,
-                moveToR,
-                moveToC
-            );
-        }
-    
-        return false;
-    }
+        } else if (SelectedPiece === 'k') {
+            if (CastlingForWhiteKing(SelectedPiece, r, c, moveToR, moveToC)) {
+                const step = moveToC > c ? 1 : -1;
+                const rookCol = step === 1 ? 7 : 0;
+                const newRookCol = moveToC - step;
+        
+                state.board[r][c] = null;
+                state.board[moveToR][moveToC] = 'k';
+        
+                state.board[r][rookCol] = null;
+                state.board[r][newRookCol] = 'r';
+        
+                state.didPeacesMoved.whiteKing = true;
+                if (rookCol === 7) {
+                    state.didPeacesMoved.whiteRookRight = true;
+                } else {
+                    state.didPeacesMoved.whiteRookLeft = true;
+                }
+        
+                board.innerHTML = '';
+                renderBoard();
+        
+                return true;
+            }
+                else {return false;}
+        }}
