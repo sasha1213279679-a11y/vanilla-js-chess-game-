@@ -1,7 +1,7 @@
-import { state, PIECES, board,  } from './board.js';
-import { isKingInCheck,} from './rules.js';
-import { shakeElement,} from './UI.js';
-import { showLegalMoves } from './simulateMoves.js';
+import { state, PIECES, board,  } from 'board.js';
+import { isKingInCheck,} from 'rules.js';
+import { shakeElement,} from 'UI.js';
+import { showLegalMoves } from 'simulateMoves.js';
 
 // Renders the chess board and pieces based on the current state
 export function renderBoard() {
@@ -40,7 +40,7 @@ export function renderBoard() {
                         if (!state.checkSoundPlayed) {
                             state.checkSoundPlayed = true;
 
-                            const audio = new Audio('/Sounds.mp3/Jumpscare Sound Effect.mp3');
+                            const audio = new Audio('Jumpscare Sound Effect.mp3');
                             audio.volume = 0.5;
                             audio.currentTime = 0.5;
                             audio.play();
