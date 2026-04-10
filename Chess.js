@@ -5,7 +5,7 @@ import {
     whiteRockMoves,
     whiteBishopMoves,
     whiteKingMoves,
-} from './whitePeacessMoves.js';
+} from 'whitePeacessMoves.js';
 
 import {
     blackKingMoves,
@@ -14,17 +14,17 @@ import {
     blackRockMoves,
     blackKnightMoves,
     blackBishopMoves,
-} from './blackPeacessMoves.js';
+} from 'blackPeacessMoves.js';
 
-import { renderBoard } from './renderBoard.js';
+import { renderBoard } from 'renderBoard.js';
 import { controlRounds, 
     checkPromotion
     ,isKingInCheck,
     isCheckmate,
     isStalemate,
 
- } from './rules.js';
-import { state,getPieceName } from './board.js';
+ } from 'rules.js';
+import { state,getPieceName } from 'board.js';
 import { showCheckmateUI,
     updateBoardRotation,
     toggleMusic,
@@ -33,8 +33,8 @@ import { showCheckmateUI,
     gameStartSound,
     showIsStalemateUI,
     
-} from './UI.js';
-import { getMoves } from './getMoves.js';
+} from 'UI.js';
+import { getMoves } from 'getMoves.js';
 
 // all variables and functions related to moves for all pieces will be here
 let moveSuccess = false;
@@ -92,7 +92,7 @@ export function MovesForAllPIECES(SelectedPeace, r, c, moveToR, moveToc, moveToP
     if (!moveSuccess) {
         document.querySelectorAll('.dot').forEach(dot => dot.remove());
 const audio=document.createElement('audio')
-audio.src="/Sounds.mp3/wrong move chess sound.mp3";
+audio.src="wrong move chess sound.mp3";
 audio.volume=0.5;
 
 audio.play();
@@ -117,7 +117,7 @@ audio.play();
     
         return false;
     }else {
-         const audio = new Audio('/Sounds.mp3/Sound Effects - Chess.com Sounds.mp3');
+         const audio = new Audio('Sound Effects - Chess.com Sounds.mp3');
          audio.currentTime = 2.5;
          audio.volume = 0.5;
          audio.play();
