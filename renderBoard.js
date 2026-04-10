@@ -1,7 +1,7 @@
-import { state, PIECES, board,  } from 'board.js';
-import { isKingInCheck,} from 'rules.js';
-import { shakeElement,} from 'UI.js';
-import { showLegalMoves } from 'simulateMoves.js';
+import { state, PIECES, board,  } from './board.js';
+import { isKingInCheck,} from './rules.js';
+import { shakeElement,} from './UI.js';
+import { showLegalMoves } from './simulateMoves.js';
 
 // Renders the chess board and pieces based on the current state
 export function renderBoard() {
